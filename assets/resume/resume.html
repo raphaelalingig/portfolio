@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Raphael Alingig - Resume</title>
+    <style>
+      @page { size: A4; margin: 14mm 15mm; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Calibri, Arial, sans-serif;
+        font-size: 10pt;
+        line-height: 1.38;
+        color: #1f2328;
+      }
+      h1 { margin: 0; font-size: 22pt; letter-spacing: 1.5px; }
+      .role { margin: 2px 0 6px; font-size: 11pt; font-weight: 600; color: #2457a6; letter-spacing: 1px; }
+      .contact { font-size: 9pt; color: #444; }
+      .contact a { color: inherit; text-decoration: none; }
+      h2 {
+        margin: 12px 0 5px;
+        padding-bottom: 2px;
+        font-size: 10.5pt;
+        letter-spacing: 1px;
+        color: #2457a6;
+        border-bottom: 1.5px solid #2457a6;
+      }
+      p { margin: 0; }
+      .job { margin-top: 7px; break-inside: avoid; }
+      .job-head { display: flex; justify-content: space-between; font-weight: 700; }
+      .job-sub { font-style: italic; color: #555; font-size: 9.3pt; }
+      ul { margin: 3px 0 0; padding-left: 16px; }
+      li { margin: 1.5px 0; }
+      .skills p { margin: 2px 0; }
+      .skills b { display: inline-block; min-width: 128px; }
+      .proj { font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>RAPHAEL ALINGIG</h1>
+      <p class="role">FULL STACK &amp; OBSERVABILITY ENGINEER</p>
+      <p class="contact">
+        Cagayan de Oro City, Philippines &nbsp;|&nbsp; +63 993 436 4246 &nbsp;|&nbsp;
+        <a href="mailto:alingigraphaell@gmail.com">alingigraphaell@gmail.com</a>
+      </p>
+      <p class="contact">
+        <a href="https://www.linkedin.com/in/raphael-alingig-093a5b289/">linkedin.com/in/raphael-alingig-093a5b289</a>
+        &nbsp;|&nbsp; <a href="https://github.com/raphaelalingig">github.com/raphaelalingig</a>
+        &nbsp;|&nbsp; <a href="https://raphaelalingig.github.io/portfolio">raphaelalingig.github.io/portfolio</a>
+      </p>
+    </header>
+
+    <h2>PROFESSIONAL SUMMARY</h2>
+    <p>
+      Full stack developer who builds web and mobile applications with React, TypeScript, Next.js, Laravel, and
+      Node.js, and makes production systems observable. Rolled out metrics, distributed tracing, structured logging,
+      SLOs, and runbooks across 45+ Java Spring Boot and Node.js microservices at Trax Technologies. Delivers client
+      projects end to end, including a live emergency response platform with an Android app for a local government unit.
+    </p>
+
+    <h2>TECHNICAL SKILLS</h2>
+    <div class="skills">
+      <p><b>Frontend:</b> React, React Native, Next.js, TypeScript, JavaScript, Redux, Zustand, TanStack Query, Tailwind CSS, PWA, Capacitor</p>
+      <p><b>Backend &amp; Data:</b> Laravel, PHP, Node.js, Express.js, Java Spring Boot, REST APIs, Sanctum, MySQL, PostgreSQL, Supabase, Kafka</p>
+      <p><b>Observability:</b> OpenTelemetry, Prometheus, PromQL, Micrometer, prom-client, Grafana, Grafana Tempo, Grafana Alloy, Log4j2 structured logging, SLOs, runbooks</p>
+      <p><b>Platforms &amp; Tools:</b> Git, GitHub Actions, CI/CD, Vercel, WordPress, Jira, Confluence</p>
+    </div>
+
+    <h2>PROFESSIONAL EXPERIENCE</h2>
+
+    <div class="job">
+      <div class="job-head"><span>Software Engineer, Observability</span><span>Aug 2026 – Present</span></div>
+      <p class="job-sub">Trax Technologies (Trax Prizma platform)</p>
+      <ul>
+        <li>Instrumented 45+ Java Spring Boot and Node.js microservices, including audit, accruals, invoice review, cost allocation, rating, carrier, and AI data processing services.</li>
+        <li>Added RED and business telemetry with Micrometer and prom-client, and standardized Grafana Alloy scrape targets on <code>/metrics</code> and <code>/actuator/prometheus</code>.</li>
+        <li>Implemented OpenTelemetry tracing to Grafana Tempo with HTTP, JDBC, and Kafka spans, and propagated trace context across Kafka producers and consumers.</li>
+        <li>Introduced Log4j2 structured logging with trace IDs so engineers can jump from a log line to the full request trace.</li>
+        <li>Maintained metrics and logs explorer dashboards as code in git (146+ commits), defined SLOs, and wrote runbooks for each service.</li>
+        <li>Resolved production issues, including context-path scrape failures, HikariCP pool sizing ignored by datasource wrappers, and JVM log-file exhaustion.</li>
+        <li>Authored reusable AI agent skills that encode the instrumentation, recheck, and status-tracking workflow so teams can apply it consistently.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span>Freelance Full Stack Developer</span><span>May 2025 – Present</span></div>
+      <p class="job-sub">Client projects</p>
+      <ul>
+        <li><span class="proj">S.A.F.E.R. (Barangay Lapasan):</span> Built a fire, flood, and earthquake reporting platform with a Laravel 12 API, queued AI photo classification, geo-radius alerts, evacuation-center tracking, PWD and senior citizen verification, and a React and TypeScript PWA with Google Maps, shipped as an Android app via Capacitor. Live at safer.freehosting.dev.</li>
+        <li><span class="proj">Science Quiz Game:</span> Built a gamified learning platform with Laravel, Spatie roles and permissions, and React, featuring student, teacher, and admin dashboards, classroom rooms, multiple question types and puzzles, badges, progress tracking, and leaderboards.</li>
+        <li><span class="proj">LinkCraft:</span> Built a URL shortener with Next.js 15, React 19, and Supabase, including link analytics, customizable bio pages, QR codes, and a GitHub Actions build pipeline.</li>
+        <li><span class="proj">POS &amp; Warehouse Management (in progress):</span> Designing a Laravel 12 and Sanctum API with seven role levels, from super admin to cashier and warehouse worker.</li>
+        <li><span class="proj">Wedding Invitation Platform:</span> Built personalized invitation links, RSVP workflows, guest notes, real-time status tracking, and an admin statistics dashboard using React, Express.js, MySQL, and Supabase.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span>Frontend Developer</span><span>Jul 2025 – Jul 2026</span></div>
+      <p class="job-sub">CLIMBS Life and General Insurance Cooperative | Full-time</p>
+      <ul>
+        <li>Developed responsive applications with React, Redux, and WordPress, creating reusable components and reliable state-management flows.</li>
+        <li>Built and integrated Laravel APIs and backend functionality to support end-to-end web application workflows.</li>
+        <li>Diagnosed and resolved full-stack defects, improving application stability, maintainability, and user experience.</li>
+        <li>Automated build and deployment workflows with GitHub Actions and tracked sprint delivery in Jira.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span>Full Stack Developer Intern</span><span>Feb 2025 – May 2025</span></div>
+      <p class="job-sub">Syntactics Inc. | Engineering Team Lead</p>
+      <ul>
+        <li>Developed responsive applications using React, Next.js, Node.js, and Laravel.</li>
+        <li>Built custom WordPress themes and improved website performance, loading speed, SEO, and cross-device usability.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span>React Frontend Developer</span><span>Aug 2024 – Oct 2024</span></div>
+      <p class="job-sub">Sustainable Sprinklers | Freelance</p>
+      <ul>
+        <li>Migrated the company website from static HTML and CSS to React and connected it to backend data services for dynamic content.</li>
+      </ul>
+    </div>
+
+    <h2>EDUCATION</h2>
+    <div class="job">
+      <div class="job-head"><span>Bachelor of Science in Information Technology</span><span>May 2025</span></div>
+      <p class="job-sub">University of Science and Technology of Southern Philippines | Cagayan de Oro City</p>
+      <ul>
+        <li>Capstone: Pick Me Up, a ride-booking web and mobile app with email verification, status notifications, and admin account management, deployed through Vercel CI/CD.</li>
+      </ul>
+    </div>
+  </body>
+</html>

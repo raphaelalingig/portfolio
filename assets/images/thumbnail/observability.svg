@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Poppins, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111217"/>
+      <stop offset="1" stop-color="#1f1d2b"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5a623" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f5a623" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="30" y="30" width="740" height="44" rx="8" fill="#181b1f" stroke="#2c3235"/>
+  <circle cx="56" cy="52" r="9" fill="#f46800"/>
+  <text x="76" y="58" fill="#d8d9da" font-size="17">Observability &#183; Metrics Explorer</text>
+  <text x="590" y="58" fill="#8e8e8e" font-size="14">job="audit-engine"</text>
+
+  <g>
+    <rect x="30" y="92" width="170" height="90" rx="8" fill="#181b1f" stroke="#2c3235"/>
+    <text x="46" y="118" fill="#8e8e8e" font-size="13">Request rate</text>
+    <text x="46" y="160" fill="#73bf69" font-size="32" font-weight="600">412/s</text>
+    <rect x="215" y="92" width="170" height="90" rx="8" fill="#181b1f" stroke="#2c3235"/>
+    <text x="231" y="118" fill="#8e8e8e" font-size="13">Error rate</text>
+    <text x="231" y="160" fill="#73bf69" font-size="32" font-weight="600">0.12%</text>
+    <rect x="400" y="92" width="170" height="90" rx="8" fill="#181b1f" stroke="#2c3235"/>
+    <text x="416" y="118" fill="#8e8e8e" font-size="13">p95 latency</text>
+    <text x="416" y="160" fill="#fade2a" font-size="32" font-weight="600">184ms</text>
+    <rect x="585" y="92" width="185" height="90" rx="8" fill="#181b1f" stroke="#2c3235"/>
+    <text x="601" y="118" fill="#8e8e8e" font-size="13">SLO availability</text>
+    <text x="601" y="160" fill="#73bf69" font-size="32" font-weight="600">99.95%</text>
+  </g>
+
+  <rect x="30" y="198" width="480" height="270" rx="8" fill="#181b1f" stroke="#2c3235"/>
+  <text x="46" y="224" fill="#d8d9da" font-size="14">HTTP latency by route (RED)</text>
+  <g stroke="#2c3235">
+    <line x1="46" y1="280" x2="494" y2="280"/>
+    <line x1="46" y1="340" x2="494" y2="340"/>
+    <line x1="46" y1="400" x2="494" y2="400"/>
+  </g>
+  <path d="M46 420 L90 390 L134 400 L178 350 L222 365 L266 320 L310 335 L354 290 L398 310 L442 270 L494 285 L494 450 L46 450 Z" fill="url(#area)"/>
+  <path d="M46 420 L90 390 L134 400 L178 350 L222 365 L266 320 L310 335 L354 290 L398 310 L442 270 L494 285" fill="none" stroke="#f5a623" stroke-width="3"/>
+  <path d="M46 435 L90 425 L134 430 L178 410 L222 418 L266 400 L310 405 L354 385 L398 395 L442 375 L494 380" fill="none" stroke="#5794f2" stroke-width="3"/>
+
+  <rect x="525" y="198" width="245" height="270" rx="8" fill="#181b1f" stroke="#2c3235"/>
+  <text x="541" y="224" fill="#d8d9da" font-size="14">Trace &#183; POST /audit</text>
+  <rect x="541" y="244" width="213" height="18" rx="3" fill="#5794f2"/>
+  <rect x="561" y="272" width="150" height="18" rx="3" fill="#b877d9"/>
+  <rect x="581" y="300" width="70" height="18" rx="3" fill="#73bf69"/>
+  <rect x="655" y="300" width="50" height="18" rx="3" fill="#73bf69"/>
+  <rect x="561" y="328" width="110" height="18" rx="3" fill="#ff9830"/>
+  <text x="541" y="378" fill="#8e8e8e" font-size="12">http.server &#8594; service</text>
+  <text x="541" y="398" fill="#8e8e8e" font-size="12">db.execute &#183; kafka.consume</text>
+  <text x="541" y="440" fill="#d8d9da" font-size="13">OpenTelemetry &#8594; Tempo</text>
+</svg>

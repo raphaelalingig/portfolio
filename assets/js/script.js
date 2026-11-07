@@ -115,6 +115,68 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
+// project detail modal
+const projectModal = document.querySelector("[data-project-modal]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+const projectModalImg = document.querySelector("[data-project-modal-img]");
+const projectModalTitle = document.querySelector("[data-project-modal-title]");
+const projectModalStack = document.querySelector("[data-project-modal-stack]");
+const projectModalSummary = document.querySelector("[data-project-modal-summary]");
+const projectModalFeatures = document.querySelector("[data-project-modal-features]");
+const projectModalLink = document.querySelector("[data-project-modal-link]");
+
+const toggleProjectModal = function () {
+  projectModal.classList.toggle("active");
+  projectOverlay.classList.toggle("active");
+}
+
+document.querySelectorAll("[data-project-btn]").forEach(function (button) {
+  button.addEventListener("click", function () {
+    const item = this.closest("[data-filter-item]");
+    const image = item.querySelector("img");
+    const features = item.querySelector("[data-project-features] ul");
+    const link = item.querySelector("[data-project-link]");
+
+    projectModalImg.src = image.src;
+    projectModalImg.alt = image.alt;
+    projectModalTitle.textContent = item.querySelector(".project-title").textContent.trim();
+    projectModalStack.textContent = item.querySelector("[data-project-stack]").textContent.trim();
+    projectModalSummary.textContent = item.querySelector("[data-project-summary]").textContent.trim();
+
+    projectModalFeatures.innerHTML = "";
+    if (features) {
+      projectModalFeatures.innerHTML = features.innerHTML;
+      projectModalFeatures.hidden = false;
+    } else {
+      projectModalFeatures.hidden = true;
+    }
+
+    if (link) {
+      projectModalLink.href = link.href;
+      projectModalLink.textContent = link.textContent.trim();
+      projectModalLink.hidden = false;
+    } else {
+      projectModalLink.hidden = true;
+      projectModalLink.removeAttribute("href");
+    }
+
+    if (!projectModal.classList.contains("active")) {
+      toggleProjectModal();
+    }
+  });
+});
+
+document.querySelector("[data-project-close]").addEventListener("click", toggleProjectModal);
+projectOverlay.addEventListener("click", toggleProjectModal);
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && projectModal.classList.contains("active")) {
+    toggleProjectModal();
+  }
+});
+
+
+
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
